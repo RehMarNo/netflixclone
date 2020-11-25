@@ -63,13 +63,12 @@ export default () => {
           Direitos da imagens para NetFlix <br/>
           Dados pegos do site Themoviedb.org
       </footer>
+      {movieList.length <= 0 && 
+        <div className="loading">
+          <img src="https://www.filmelier.com/pt/br/news/wp-content/uploads/2020/03/Netflix_LoadTime-scaled-692x376.gif" alt="Carregando" />
+        </div>
+      }
     </div>
   );
 }
 
-
-
-//Header
-//Destaques
-//A lista
-//Rodapé
