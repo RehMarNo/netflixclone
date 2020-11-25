@@ -1,9 +1,9 @@
 import React, { useEffect , useState} from 'react';
 import './App.css';
 import Tmdb from './tmdb';
-import MovieRow from './components/MovieRow';
-import FeaturedMovie from './components/FeaturedMovie';
-import Header from './components/Header/Header';
+import MovieRow from './components/MovieRow/';
+import FeaturedMovie from './components/FeaturedMovie/';
+import Header from './components/Header/';
 
 export default () => {
 
@@ -30,13 +30,7 @@ export default () => {
 
   useEffect(() => {
     //monitora o scroll
-    const scrollListener = () => {
-      if (window.scrollY > 10) {
-        setBlackHeader(true);
-      } else {
-        setBlackHeader(false);
-      }
-    }
+    const scrollListener = () => { (window.scrollY > 10 ? setBlackHeader(true) : setBlackHeader(false));}
     window.addEventListener('scroll', scrollListener);
     return () => {
       window.removeEventListener('scroll', scrollListener);
