@@ -10,7 +10,7 @@ export default ({item}) => {
     }
     let shortDescription = item.overview;
     if (shortDescription.length > 300) {
-        shortDescription = shortDescription.slice(0, 300);
+        shortDescription = (shortDescription.slice(0, 300).concat(' ...'));
     }
 
     return (

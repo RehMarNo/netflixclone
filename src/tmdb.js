@@ -12,6 +12,10 @@ const API_BASE = 'https://api.themoviedb.org/3';
 - documentário
 */
 
+/**
+ fetch(): busca recursos de forma assíncrona através da rede  
+ */
+
 const basicFetch = async (endpoint) => {
     const req = await fetch(`${API_BASE}${endpoint}`);
     const json = await req.json();
